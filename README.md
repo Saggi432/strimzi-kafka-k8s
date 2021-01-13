@@ -250,4 +250,5 @@ https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/kafka
     
  # References
  https://github.com/abhirockzz/strimzi-kafka-connect-eventhubs
+ 
  https://mirror.its.dal.ca/apache/kafka/2.3.0/kafka_2.11-2.3.0.tgz
