@@ -1,5 +1,5 @@
 # strimzi-kafka-k8s
-Template files for kafka connect(ors) on eks, examples from https://github.com/abhirockzz/strimzi-kafka-connect-eventhubs have been taken 
+Template files for kafka connect(ors) on eks/ubuntu-vm 
 
 # Using Kafka-cli
 
@@ -19,7 +19,7 @@ https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/kafka
       AZURE_RESOURCE_GROUP=EHRG
       KAFKA_INSTALL_HOME=/usr/local/bin/kafka_2.11-2.3.0/
       EVENT_HUB_NAME=myeventhub
-      EVENT_HUBS_NAMESPACE=aseventhubtest
+      EVENT_HUBS_NAMESPACE=test
 
 
 
@@ -213,7 +213,7 @@ https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/kafka
           secretName: eventhubssecret
         type: plain
         username: $ConnectionString
-      bootstrapServers: aseventhubtest.servicebus.windows.net:9093
+      bootstrapServers: test.servicebus.windows.net:9093
       config:
         config.storage.topic: sink-strimzi-connect-cluster-configs
         group.id: sink-cluster
@@ -248,3 +248,5 @@ https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/kafka
         topics: 433
       tasksMax: 1
     
+ # References
+ https://github.com/abhirockzz/strimzi-kafka-connect-eventhubs
