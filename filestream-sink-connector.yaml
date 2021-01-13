@@ -1,0 +1,12 @@
+apiVersion: kafka.strimzi.io/v1alpha1
+kind: KafkaConnector
+metadata:
+  name: sink-connector
+  labels:
+    strimzi.io/cluster: my-sink-cluster
+spec:
+  class: org.apache.kafka.connect.file.FileStreamSinkConnector
+  tasksMax: 1
+  config:
+    file: "/tmp/sink-worker.log"
+    topics: myeventhub
